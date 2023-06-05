@@ -486,7 +486,7 @@ func testBooleanLiteral(t *testing.T, exp ast.Expression, value bool) bool {
 }
 
 func TestIfExpression(t *testing.T) {
-	input := `if (x < y) { x }`
+	input := `if (x < y) { x } else {x+y}`
 
 	l := lexer.New(input)
 	p := New(l)
